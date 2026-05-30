@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability (private)
+    url: https://github.com/grandmediastation/gms-public/security/advisories/new
+    about: Do not open a public issue for security problems — use a private advisory.
+  - name: Support & general questions
+    url: mailto:support@grandmediastation.com
+    about: For help that isn't a bug report or feature request.
+  - name: Product site & downloads
+    url: https://grandmediastation.com
+    about: Docs, downloads, and changelog.
