@@ -1,0 +1,51 @@
+name: Feature request
+description: Suggest an idea or improvement for Grand Media Station
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Please search existing requests first — if one
+        already exists, add a 👍 and your details there instead of opening a
+        new one.
+  - type: checkboxes
+    id: prereqs
+    attributes:
+      label: Before you start
+      options:
+        - label: I searched existing requests and didn't find a match.
+          required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Which area does this touch?
+      options:
+        - The Switching Yard (renaming)
+        - Grand Central Storage (libraries, servers, backup)
+        - The Track Record (rename log / undo)
+        - The Comparison Tool (4K compare)
+        - REST API / MCP server
+        - Transcoding
+        - Other / not sure
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the pain point — "I'm always frustrated when …"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+    validations:
+      required: false
