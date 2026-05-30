@@ -1,0 +1,72 @@
+name: Bug report
+description: Report a reproducible problem in Grand Media Station
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. Please search existing issues first — it
+        avoids duplicates and gets us to your report faster.
+
+        ⚠️ **Privacy:** GMS never sends your library or personal data off your
+        device, and neither should this issue. Scrub file paths, license keys,
+        email addresses, and tokens from anything you paste.
+  - type: checkboxes
+    id: prereqs
+    attributes:
+      label: Before you start
+      options:
+        - label: I searched existing issues and didn't find a duplicate.
+          required: true
+        - label: I'm on the latest version of GMS, or have noted my version below.
+          required: true
+  - type: input
+    id: version
+    attributes:
+      label: GMS version
+      description: Help → About, or the title bar.
+      placeholder: e.g. 0.47.0
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows 11
+        - Windows 10
+        - Linux — Ubuntu / Debian (.deb)
+        - Linux — Fedora / RHEL (.rpm)
+        - Linux — AppImage
+        - Other (note in description)
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what actually happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps that reliably trigger the bug.
+      placeholder: |
+        1. Open the Switching Yard
+        2. Add a folder containing …
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: >
+        Paste any error text. Remove secrets, tokens, license keys, email
+        addresses, and full file paths first.
+      render: text
+    validations:
+      required: false
